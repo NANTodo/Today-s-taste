@@ -1,13 +1,27 @@
-<html>
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 맛</title>
 
-    <link rel="stylesheet" href="test.css">
-     <script type="text/javascript" src="test.js"></script> 
-  </head>
-  <body>
-    <div id="gradient" />
- </body>
-</html>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
    
+    <script type="text/javascript">
+        function userInput(){
+            alert('working');
+            var name=document.getElementById('search').value;
+            alert(name);
+        }
+    </script>
+</head>
+<body>
+    <!--검색 창-->
+    <form action="" class="search-form" >
+        <input type="text" placeholder="Search" id="search" name="search" autocomplete="off">
+        <input type="button" onclick="userInput()">실행</button>
+
+    </form>
+</body>
+</html>
