@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+module.exports = {
+    HTML:function(title){
+      return `
+      <!DOCTYPE html>
 <html lang="kor">
 
 <head>
@@ -28,22 +31,8 @@
 <body id ="gradient">
     <div id="wrap">
         <!--웹 제목-->
-        <header id="header">오늘의 맛</header>
-        <script>
-          
-               var temp = location.href.split("?");
-                console.log(temp);
-               var data=temp[1].split("=");
-                
-               var name = data[0];
-                
-               var content = data[1];
-                
-              $("#header").append(content);
-                
-               
-              
-        </script>
+        <header id="header">오늘의 맛 ${title}</header>
+
         <!--검색창-->
         <aside>검색창</aside>
 
@@ -93,3 +82,15 @@
 </body>
 
 </html>
+      `;
+    },list:function(filelist){
+      var list = '<ul>';
+      var i = 0;
+      while(i < filelist.length){
+        list = list + `<li><a href="/?id=${filelist[i]}">${filelist[i]}</a></li>`;
+        i = i + 1;
+      }
+      list = list+'</ul>';
+      return list;
+    }
+  }
