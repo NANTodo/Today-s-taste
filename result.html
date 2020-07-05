@@ -58,6 +58,9 @@
                         <div>
                             <form onsubmit="searchPlaces(); return false;">
                                 키워드 : <input type="text" value="세종대" id="keyword" size="15">
+                                <script>//카카오 맵에서 검색하기 글씨를 바꿔줌.
+                                    $('#keyword').val(food_name);
+                                </script>
                                 <button type="submit">검색하기</button>
                             </form>
                         </div>
