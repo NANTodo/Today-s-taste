@@ -4,7 +4,7 @@ var colors = new Array(
     [206, 128, 142],
     [255, 169, 133],
     [255, 128, 96],
-    [255, 128, 142]);
+    [152, 98, 177]);
   
   var step = 0;
   //color table indices for: 

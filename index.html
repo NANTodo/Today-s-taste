@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="./css/bg.css">
     <link rel="stylesheet" href="./css/searchbox.css">
 
+
+    <!--검색을 엔터키로 하실 처리되는 함수-->
     <script type="text/javascript">
         function Enter_Check(){
             // 엔터키의 코드는 13입니다.
@@ -46,7 +48,7 @@
                     <div class="search-icon"><i class="fa fa-search search-icon"></i></div>
                     <!--검색 창  localhost/result.html-->
                     <form action="./result.html" class="search-form" >
-                        <input type="text" method="get" placeholder="Search" id="search" name="search" autocomplete="off" onkeydown="Enter_Check()">
+                        <input type="text" method="get" placeholder="입력 ex)#단맛#짠맛" id="search" name="search" autocomplete="off" onkeydown="Enter_Check()">
 
                     </form>
                     

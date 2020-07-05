@@ -22,33 +22,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/bg.css">
     
+  
 
 </head>
 
 <body id ="gradient">
     <div id="wrap">
         <!--웹 제목-->
-        <header id="header">오늘의 맛</header>
-        <script>
-          
-               var temp = location.href.split("?");
-                console.log(temp);
-               var data=temp[1].split("=");
-                
-               var name = data[0];
-                
-               var content = data[1];
-                
-              $("#header").append(content);
-                
-               
-              
+        <header id="header">#오늘의 맛<br></header>
+        <!--쿼리스트링 파싱 관련 js-->
+        <script type="text/javascript" src="./js/queryString.js">
+           
         </script>
-        <!--검색창-->
-        <aside>검색창</aside>
+            
+                
+        <!--사진-->
+        <aside>사진<br>
+            <img id="picture" src="">
+            <script type="text/javascript" src="./js/selectImage.js"></script>
+           
+        </aside>
 
-        <!--음식 사진-->
-        <section>음식 사진</section>
+       
 
         <!--맵-->
         <article>
