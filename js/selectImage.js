@@ -16,4 +16,6 @@ if(input_text[1]=="단맛"){
     return img_src;
     }
     food_name = "오렌지";
+}else{
+    food_name="세종대";
 }
