@@ -1,5 +1,5 @@
 var food_name;
-if(input_text[1]=="단맛"){
+if(input_text[1]=="한식"){
     document.getElementById('picture').src=logo_info()
         function logo_info() {
         var img_src;

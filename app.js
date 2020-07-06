@@ -34,30 +34,134 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname+'/main.html'));
    
 });
-//라우터를 result로 설정  result.html으로 쓰면 안됨
-//form 액션으로 인해 url이 http://localhost:3000/result?search=땡땡 이렇게 써진다. 그리고 라우터는 /result로 받는다.
-//form 태그에서 action을 보면 result로 되었음. result.html이 아니라.
+
 app.get('/result', function(req, res) {
     console.log("두번째화면");
     res.sendFile(path.join(__dirname+'/result.html'));//이걸로 인해서 main2.html 불러옴. 물론 html form태그에서 action 경로를 해줘야 이동함.
     var data = req.query.search;
-    var input_text = data.split("#");
+    var search_text = data.split("#");
 
-    console.log(input_text[1]);//인덱스를 1부터 해줘야함.
-
-    db.query('select * from food;',function (err, rows, fields) {
+    for(var i=1;i<search_text.length;i++){
+        console.log(search_text[i]);//인덱스를 1부터 해줘야함.
+    }
+    //검색할 때 어떻게 sql에서 찾아서 사진을 보여줄건지. 순서 상관x 너무 어렵다..
+    db.query('select * from tastetag;',function (err, rows, fields) {
+        var wordAry = new Array();
+        var q=0;
+        var p=0;
+        var cnt=-1;
         if (!err) {
-            console.log(rows[0]);
+            //sql에서 해당하는거 찾아줌.
+            for(var j=0;j<search_text.length;j++){//검색 단어의 갯수
+                for(var i=0;i<rows.length;i++){//tastetag행의 갯수
+                    if(search_text[j+1]==rows[i].tname){//검색 단어와 tastetag의 tname이 같으면 ex) 한식(search_text) == 한식(tname)
+                        console.log("tname : " + rows[i].tname + " tcode : " + rows[i].tcode);//tname에 해당하는 tcode를 구별할수 있게됨
+                        wordAry[q]=rows[i].tcode;
+                        console.log("wordAry "+wordAry[q]);
+                        q++;
+                    }
+                }
+                cnt++;//
+             }
+             console.log(cnt);
             
-           var result ='rows : ' + JSON.stringify(rows[0]) + '<br><br>';
-          //  res.send(result);
+             if(cnt==1){//단어1개
+                for(var ii=1;ii<=5;ii++){
+                    db.query('select * from food where taste?=?',[ii,wordAry[p]],function (err, rows2, fields) {
+                        for(var k=0;k<rows2.length;k++){//k for문
+                        console.log("검색결과 :  " + rows2[k].foodname +" "+rows2[k].taste1);//곱
+                        }//k for문
+                    
+                    });
+                }
+            }//단어 한개
+            else if(cnt==2){//단어 한개
+                q=0;
+                if(wordAry[q]>wordAry[q+1]){
+                    var temp = wordAry[q];
+                    wordAry[q] = wordAry[q+1];
+                    wordAry[q+1] =temp;
+                }
+                for(var i=1;i<=5;i++){
+                    for(var j=1;j<=5;j++){
+                        db.query('select * from food where taste?=? and taste?=?',[i,wordAry[p],j,wordAry[p+1]],function (err, rows2, fields) {
+                            for(var k=0;k<rows2.length;k++){//k for문
+                             console.log("검색결과 :  " + rows2[k].foodname +" "+rows2[k].taste1);//곱
+                            }//k for문
+                           
+                        });
+                    }
+                }
+               
+            }//단어 두개
+            else if(cnt==3){//단어 3개
+               
+               for(var i=0;i<cnt-1;i++){//버블정렬
+                   for(var j=0;j<cnt-1;j++){
+                       if(wordAry[j]>wordAry[j+1]){
+                           var temp = wordAry[j+1];
+                           wordAry[j+1] =wordAry[j];
+                           wordAry[j] = temp;
+                       }
+                   }
+               }
+            
+                db.query('select * from food where taste1=? and taste2=? and taste3=?',[wordAry[p],wordAry[p+1],wordAry[p+2]],function (err, rows2, fields) {
+                    for(var k=0;k<rows2.length;k++){//k for문
+                     console.log("검색결과 :  " + rows2[k].foodname +" "+rows2[k].taste1);//곱
+                    }//k for문
+                   
+                });
+            }//단어 3개
+            else if(cnt==4){//단어 4개
+               
+                for(var i=0;i<cnt-1;i++){//버블정렬
+                    for(var j=0;j<cnt-1;j++){
+                        if(wordAry[j]>wordAry[j+1]){
+                            var temp = wordAry[j+1];
+                            wordAry[j+1] =wordAry[j];
+                            wordAry[j] = temp;
+                        }
+                    }
+                }
+             
+                 db.query('select * from food where taste1=? and taste2=? and taste3=? and taste4=?',[wordAry[p],wordAry[p+1],wordAry[p+2],wordAry[p+3]],function (err, rows2, fields) {
+                     for(var k=0;k<rows2.length;k++){//k for문
+                      console.log("검색결과 :  " + rows2[k].foodname +" "+rows2[k].taste1);//곱
+                     }//k for문
+                    
+                 });
+             }//단어 4개
+             else if(cnt==5){//단어 5개
+               
+                for(var i=0;i<cnt-1;i++){//버블정렬
+                    for(var j=0;j<cnt-1;j++){
+                        if(wordAry[j]>wordAry[j+1]){
+                            var temp = wordAry[j+1];
+                            wordAry[j+1] =wordAry[j];
+                            wordAry[j] = temp;
+                        }
+                    }
+                }
+             
+                 db.query('select * from food where taste1=? and taste2=? and taste3=? and taste4=? and taste5=?',[wordAry[p],wordAry[p+1],wordAry[p+2],wordAry[p+3],wordAry[p+4]],function (err, rows2, fields) {
+                     for(var k=0;k<rows2.length;k++){//k for문
+                      console.log("검색결과 : " + rows2[k].foodname +" "+rows2[k].taste1);//곱
+                     }//k for문
+                    
+                 });
+             }//단어 5개
+
+                
+          
+           
         } else {
             console.log('query error : ' + err);
             res.send(err);
         }
     });
-    
-    
+ 
+   
 
 });
 
