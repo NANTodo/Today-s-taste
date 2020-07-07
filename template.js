@@ -55,7 +55,7 @@ module.exports = {
       
       
               <!--사진-->
-              <aside><h2 style="color: white; margin: 20px;">${foodname}</h2><br>
+              <aside><h2 style="color: white; margin: 20px;">#${foodname}</h2><br>
                 <div class="pic_background">
                   <img id="picture" src="">
                   <script>
@@ -84,7 +84,7 @@ module.exports = {
                           <div class="option">
                               <div>
                                   <form onsubmit="searchPlaces(); return false;">
-                                      키워드 : <input type="text" value="${foodname}" id="keyword" size="15">
+                                      키워드 : <input type="text" value="세종대 ${foodname}" id="keyword" size="15">
                                       
                                       <button type="submit">검색하기</button>
                                   </form>
@@ -111,7 +111,7 @@ module.exports = {
                       <!-- LightWidget WIDGET -->
                       <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
                       <iframe id="insta" src="" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-                      <script src="./js/selectImage.js"></script>
+                      <script src="./js/selectImage2.js"></script>
                     </div>
                   </div>
                 </article>

@@ -77,7 +77,7 @@ app.get('/result', function(req, res) {
         var sql = 'select foodname from tagmatch order by hit desc limit 1';
         db.query(sql,function(err,food){
           var answer = new Array();
-          answer = ["곱창","닭발","파스타","떡볶이","초밥","마라탕","파전","전골","치킨","커리","브런치","라면","샐러드","도넛","쌀국수"];
+          answer = ["결과 없음","곱창","닭발","파스타","떡볶이","초밥","마라탕","파전","전골","치킨","커리","브런치","라면","샐러드","도넛","쌀국수"];
           if(err) {
             throw err;
             //console.log('error:',err.message);
