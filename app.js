@@ -105,13 +105,19 @@ app.get('/result', function(req, res) {
                        }
                    }
                }
-            
-                db.query('select * from food where taste1=? and taste2=? and taste3=?',[wordAry[p],wordAry[p+1],wordAry[p+2]],function (err, rows2, fields) {
-                    for(var k=0;k<rows2.length;k++){//k for문
-                     console.log("검색결과 :  " + rows2[k].foodname +" "+rows2[k].taste1);//곱
-                    }//k for문
-                   
-                });
+               for(var i=1;i<=5;i++){
+                    for(var j=1;j<=5;j++){
+                        for(var q=1;q<=5;q++){
+                            db.query('select * from food where taste?=? and taste?=? and taste?=?',[i,wordAry[p],j,wordAry[p+1],q,wordAry[p+2]],function (err, rows2, fields) {
+                                for(var k=0;k<rows2.length;k++){//k for문
+                                 console.log("검색결과 :  " + rows2[k].foodname +" "+rows2[k].taste1);//곱
+                                }//k for문
+                               
+                            });
+                        }
+                    }
+                }
+                
             }//단어 3개
             else if(cnt==4){//단어 4개
                
@@ -124,13 +130,23 @@ app.get('/result', function(req, res) {
                         }
                     }
                 }
-             
-                 db.query('select * from food where taste1=? and taste2=? and taste3=? and taste4=?',[wordAry[p],wordAry[p+1],wordAry[p+2],wordAry[p+3]],function (err, rows2, fields) {
-                     for(var k=0;k<rows2.length;k++){//k for문
-                      console.log("검색결과 :  " + rows2[k].foodname +" "+rows2[k].taste1);//곱
-                     }//k for문
-                    
-                 });
+                
+
+                for(var i=1;i<=5;i++){
+                    for(var j=1;j<=5;j++){
+                        for(var q=1;q<=5;q++){
+                           for(var o=1;o<=5;o++){
+                            db.query('select * from food where taste?=? and taste?=? and taste?=? and taste?=?',[i,wordAry[p],j,wordAry[p+1],q,wordAry[p+2],o,wordAry[p+3]],function (err, rows2, fields) {
+                                for(var k=0;k<rows2.length;k++){//k for문
+                                 console.log("검색결과 :  " + rows2[k].foodname +" "+rows2[k].taste1);//곱
+                                }//k for문
+                               
+                            });
+                           }
+                        }
+                    }
+                }
+            
              }//단어 4개
              else if(cnt==5){//단어 5개
                
@@ -143,13 +159,25 @@ app.get('/result', function(req, res) {
                         }
                     }
                 }
-             
-                 db.query('select * from food where taste1=? and taste2=? and taste3=? and taste4=? and taste5=?',[wordAry[p],wordAry[p+1],wordAry[p+2],wordAry[p+3],wordAry[p+4]],function (err, rows2, fields) {
-                     for(var k=0;k<rows2.length;k++){//k for문
-                      console.log("검색결과 : " + rows2[k].foodname +" "+rows2[k].taste1);//곱
-                     }//k for문
-                    
-                 });
+                
+                for(var i=1;i<=5;i++){
+                    for(var j=1;j<=5;j++){
+                        for(var q=1;q<=5;q++){
+                           for(var o=1;o<=5;o++){
+                                for(var c=1;c<=5;c++){
+                                    db.query('select * from food where taste?=? and taste?=? and taste?=? and taste?=? and taste?=?',[i,wordAry[p],j,wordAry[p+1],q,wordAry[p+2],o,wordAry[p+3],c,wordAry[p+4]],function (err, rows2, fields) {
+                                        for(var k=0;k<rows2.length;k++){//k for문
+                                         console.log("검색결과 : " + rows2[k].foodname +" "+rows2[k].taste1);//곱
+                                        }//k for문
+                                       
+                                    });
+                                }
+                           }
+                        }
+                    }
+                }
+
+                
              }//단어 5개
 
                 
