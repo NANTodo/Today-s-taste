@@ -119,14 +119,7 @@ module.exports = {
       
               <!--공유링크-->
               <footer>
-                  <h2 style="color: white; text-align: center;"><공유 링크></h2>
-                  <div class="footer_icon">
-                      <li><a href="#"><i class="fa fa-html5" aria-hidden="true"></i><span>HTML5</span></a></li>
-                      <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i><span>Github</span></a></li>
-                      <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i><span>Facebook</span></a></li>
-                      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a></li>
-                  </div>
-      
+                 
                   <!-- 검색창으로 다시 돌아가기 -->
                   <div style="text-align: center; color: white; margin: 50px auto;">
                     <h1>아직도 뭘 먹을 지 잘 모르겠다면?</h1>

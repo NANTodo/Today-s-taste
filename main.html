@@ -7,12 +7,12 @@
     <title>오늘의 맛</title>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    
-    
-     <!--스크립트 연동-->
-   <script type="text/javascript" src="./js/bg.js"></script> 
-   <script type="text/javascript" src="./js/searchbox.js"></script>
-    
+
+
+    <!--스크립트 연동-->
+    <script type="text/javascript" src="./js/bg.js"></script>
+    <script type="text/javascript" src="./js/searchbox.js"></script>
+
     <!--폰트-->
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap" rel="stylesheet">
@@ -24,40 +24,48 @@
     <link rel="stylesheet" href="./css/frame.css">
     <link rel="stylesheet" href="./css/footicon.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/bg.css">
     <link rel="stylesheet" href="./css/searchbox.css">
 
 
     <!--검색을 엔터키로 하실 처리되는 함수-->
     <script type="text/javascript">
-        function Enter_Check(){
+        function Enter_Check() {
             // 엔터키의 코드는 13입니다.
-        if(event.keyCode == 13){
-            var name=document.getElementById('search').value;
-            alert(name);
-            window.location.href = './result.html';
+            if (event.keyCode == 13) {
+                var name = document.getElementById('search').value;
+                alert(name);
+                window.location.href = './result.html';
+            }
         }
-    }
     </script>
 
-   
+
 </head>
-<body id ="gradient">
+
+<body id="gradient">
     <!--검색 박스 관련-->
-    <div id ="SearchBox">
+    <div id="SearchBox">
         <main>
             <div class="container">
                 <h1>오늘 뭐 먹을까?</h1>
                 <h2>#오늘의 맛</h2>
+                <!-- <button class ="text_tag_input_reset" onclick="document.getElementById('search').value = ''">초기화</button> -->
                 <div class="search-box">
                     <div class="search-icon"><i class="fa fa-search search-icon"></i></div>
                     <!--검색 창  localhost/result.html-->
-                    <form action="./result" class="search-form" >
-                        <input  class="text_tag_input" type="text" method="get" placeholder="입력 ex)#단맛#짠맛" id="search" name="search" autocomplete="off" onkeydown="Enter_Check()">
+                    <form action="./result" class="search-form">
+                        <input class="text_tag_input" type="text" method="get" placeholder="Search" id="search"
+                            name="search" autocomplete="off" onkeydown="Enter_Check()">
+                            
+                            
 
                     </form>
+
                     
+
                     <!--검색 보더 관련-->
                     <svg class="search-border" version="1.1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -68,121 +76,148 @@
                     </svg>
                     <div class="go-icon"><i class="fa fa-arrow-right"></i></div>
                 </div>
+                <br>
                 
-                
-                
-                
+                <h2 ><a href="#" class ="text_tag_input_reset" onclick="document.getElementById('search').value = ''">다시검색하기</a></h2>
+
+
+
             </div>
-            
+
         </main>
-        
+
         <!-- 구름 태그 -->
     </div>
-  
-        <div class = "cloud tags_select">
-            <a href="#"><div id="aa">#한식</div> </a>
-                         
-        </div>
-        <div class = "cloud2 tags_select">
-             
-            <a href="#"><div id="bb">#일식</div> </a>            
-        </div>
-    
-        <div class = "cloud3 tags_select">
-            <a href="#"><div id="cc">#중식</div> </a>
-                         
-        </div>
-        <div class = "cloud4 tags_select">
-             
-            <a href="#"><div id="dd">#양식</div> </a>            
-        </div>
-        <div class = "cloud5 tags_select">
-             
-            <a href="#"><div id="ee">#그외</div> </a>            
-        </div>
-        <div class = "cloud6 tags_select">
-             
-            <a href="#"><div id="ff">#육류</div> </a>            
-        </div>
-    
-        <div class = "cloud7 tags_select">
-             
-            <a href="#"><div id="gg">#면류</div> </a>            
-        </div>
-    
-        <div class = "cloud8 tags_select">
-             
-            <a href="#"><div id="gg">#밥류</div> </a>            
-        </div>
 
-        <div class = "cloud9 tags_select">
-            <a href="#"><div id="aa">#떡</div> </a>
-                         
-        </div>
-        <div class = "cloud10 tags_select">
-             
-            <a href="#"><div id="bb">#빵</div> </a>            
-        </div>
-    
-        <div class = "cloud11 tags_select">
-            <a href="#"><div id="cc">#해산물</div> </a>
-                         
-        </div>
-        <div class = "cloud12 tags_select">
-             
-            <a href="#"><div id="dd">#국물</div> </a>            
-        </div>
-        <div class = "cloud13 tags_select">
-             
-            <a href="#"><div id="ee">#구이</div> </a>            
-        </div>
-        <div class = "cloud14 tags_select">
-             
-            <a href="#"><div id="ff">#튀김</div> </a>            
-        </div>
-    
-        <div class = "cloud15 tags_select">
-             
-            <a href="#"><div id="gg">#매운</div> </a>            
-        </div>
-    
-        <div class = "cloud16 tags_select">
-             
-            <a href="#"><div id="gg">#향신료</div> </a>            
-        </div>
-    
-  
-<!-- 테스트영역 -->
+    <div class="cloud tags_select">
+        <div id="bb"><a href="#" onclick="focusMethod()">#한식</a></div>
+    </div>
+
+    <div class="cloud2 tags_select">
 
 
-<!-- <div>
-    <input id="text_tag_input" type="text" name="tags" placeholder="위에거"/>
-</div>
+        <div id="bb"><a href="#" onclick="focusMethod()">#일식</a></div>
 
-<input id="text_tag_input" type="text" name="tags" /> -->
+    </div>
 
-<!-- <div class="tags_select">
-    <a href="#">#매운맛</a>
-    <a href="#">#단맛</a>
-    <a href="#">#짠맛</a>
-</div> -->
+    <div class="cloud3 tags_select">
+
+        <div id="cc"><a href="#" onclick="focusMethod()">#중식</a></div>
+
+
+    </div>
+    <div class="cloud4 tags_select">
+
+
+        <div id="dd"><a href="#" onclick="focusMethod()">#양식</a></div>
+
+    </div>
+    <div class="cloud5 tags_select">
+
+
+        <div id="ee"><a href="#" onclick="focusMethod()">#그외</a></div>
+
+    </div>
+    <div class="cloud6 tags_select">
+
+
+        <div id="ff"><a href="#" onclick="focusMethod()">#육류</a></div>
+
+    </div>
+
+    <div class="cloud7 tags_select">
+
+
+        <div id="gg"><a href="#" onclick="focusMethod()">#면류</a></div>
+
+    </div>
+
+    <div class="cloud8 tags_select">
+
+
+        <div id="gg"><a href="#" onclick="focusMethod()">#밥류</a></div>
+
+    </div>
+
+    <div class="cloud9 tags_select">
+
+        <div id="aa"><a href="#" onclick="focusMethod()">#떡</a></div>
+
+
+    </div>
+    <div class="cloud10 tags_select">
+
+
+        <div id="bb"><a href="#" onclick="focusMethod()">#빵</a></div>
+
+    </div>
+
+    <div class="cloud11 tags_select">
+
+        <div id="cc"><a href="#" onclick="focusMethod()">#해산물</a></div>
+
+
+    </div>
+    <div class="cloud12 tags_select">
+
+
+        <div id="dd"><a href="#" onclick="focusMethod()">#국물</a></div>
+
+    </div>
+    <div class="cloud13 tags_select">
+
+
+        <div id="ee"><a href="#" onclick="focusMethod()">#구이</a></div>
+
+    </div>
+    <div class="cloud14 tags_select">
+
+
+        <div id="ff"><a href="#" onclick="focusMethod()">#튀김</a></div>
+
+    </div>
+
+    <div class="cloud15 tags_select">
+
+
+        <div id="gg"><a href="#" onclick="focusMethod()">#매운</a></div>
+
+    </div>
+
+    <div class="cloud16 tags_select">
+
+
+        <div id="gg"><a href="#" onclick="focusMethod()">#중식</a></div>
+
+    </div>
     
+    
+
     <!-- 자바스크립트영역 -->
-<script type="text/javascript">
-var count = 0;
-    $('.tags_select a').click(function() {
-count ++;
-if(count >=5) {
-    // alert("4개까지만 입력가능합니다!")
-    return false;
-    }
-var value = $(this).text();
-var input = $('.text_tag_input');
-input.val(input.val() + value);
-return false;
-});
-</script>
-  
+    <script type="text/javascript">
+        var count = 0;
+        $('.tags_select a').click(function () {
+            count++;
+            if (count >= 5) {
+                // alert("4개까지만 입력가능합니다!")
+                return false;
+            }
+            var value = $(this).text();
+            var input = $('.text_tag_input');
+            input.val(input.val() + value);
+            return false;
+        });
+        $('.text_tag_input_reset').click(function () {
+            count = 0;
+            
+        });
+
+        focusMethod = function getFocus() {           
+  document.getElementById("search").focus();
+}
+
+    </script>
+
 </body>
 
 </html>
