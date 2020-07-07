@@ -37,7 +37,7 @@ if(search_food =="곱창"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/a2d33af2a73a536794580aeed7bd400e.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/797a996384e059288f3271927498e7de.html';
 }
 else if(search_food=="초밥"){
     document.getElementById('picture').src=logo_info()
@@ -47,7 +47,7 @@ else if(search_food=="초밥"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/83adce342a525f87a4e97ed7ca0822c0.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/f85b2ac18ca7571d8d06f98215416a2e.html';
 }else if(search_food=="마라탕"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
@@ -56,7 +56,7 @@ else if(search_food=="초밥"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/2131473418c4535f8b483d62afb92894.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/6f031e77c8e45304bb3eda879c927d98.html';
 }else if(search_food=="파전"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
@@ -65,7 +65,7 @@ else if(search_food=="초밥"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/a8051aa1dc6058d2807f9b27d791f535.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/e2633130d1de56cfa091edd1fa3ced20.html';
 }else if(search_food=="전골"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
@@ -74,7 +74,7 @@ else if(search_food=="초밥"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/a8051aa1dc6058d2807f9b27d791f535.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/9ea2f446e15c5f6a90f43919c366964c.html';
 }else if(search_food=="치킨"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
@@ -83,7 +83,7 @@ else if(search_food=="초밥"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/671ba1c98e4951bebff7995fb50f6196.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/2f9266a7d1ac5550b2eac90612fb4cb8.html';
 }else if(search_food=="커리"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
@@ -92,7 +92,7 @@ else if(search_food=="초밥"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/2c1f962ea6fc555cac466438884d94c7.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/7fbc82ea5197577f85f9c66d94927f55.html';
 }else if(search_food=="브런치"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
@@ -101,7 +101,7 @@ else if(search_food=="초밥"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/45a6136534db55649677aa64d8182301.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/392a33624e035d76adfc42916257060f.html';
 }else if(search_food=="라면"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
@@ -110,7 +110,7 @@ else if(search_food=="초밥"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/845ca06c1dea5c8abe78804eb8f82cb6.html';
 }else if(search_food=="샐러드"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
@@ -119,7 +119,7 @@ else if(search_food=="초밥"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/c6f7bf8584bf5ba8a48cde52f149a254.html';
 }else if(search_food=="도넛"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
@@ -128,7 +128,7 @@ else if(search_food=="초밥"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/dbd6abe263d3538181ae5b47ec772bbf.html';
 }
 else if(search_food=="쌀국수"){
     document.getElementById('picture').src=logo_info()
@@ -138,5 +138,5 @@ else if(search_food=="쌀국수"){
     return img_src;
     }
    
-    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/6be657c658c45912a0276c722a22a5b5.html';
 }
