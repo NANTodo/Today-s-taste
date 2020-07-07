@@ -52,11 +52,14 @@ module.exports = {
 
 
 
+
         <!--맵-->
         <article>
             <!--카카오 맵-->
             <a href="https://map.kakao.com/?urlX=449605&urlY=1112610&urlLevel=8&map_type=TYPE_MAP&map_hybrid=false"
-                target="_blank">길찾기</a>
+                target="_blank" style="text-decoration: none;">
+                <h2 style="color: white; margin:-20px 20px 20px 20px; float: left;">음식점 찾기<img src="images/kakao_navi_logo.png" style="width: 30px; margin: 20px 0px -5px 10px;"/></h2>
+              </a><span><h4 style="color: white; margin-top: 10px">(클릭 시 경로 안내 창으로 이동)</h4></span>
             <div class="map_wrap">
                 <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
 
@@ -98,10 +101,10 @@ module.exports = {
 
         <!-- 타 사이트 검색결과 -->
         <div>
-          <article style="width: 700px; height: 800px;">
-            <h2 style="color: white; margin: 20px;">Instagram 검색 결과</h2>
+          <article style="width: 1200px; height:600px;">
+            <h2 style="color: white; margin: 20px;">이외 검색 결과</h2>
             <div class="review_background">
-              <div class="review" style="width: 600px; height: 600px;">
+              <div class="review" style="width: 1150px; height: 400px;">
                 <!-- LightWidget WIDGET -->
                 <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
                 <iframe id="insta" src="" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
@@ -128,7 +131,6 @@ module.exports = {
                 <h2>"다시 검색하러 가기"</h2></a>
             </div>
         </footer>
-
     </div>
 </body>
 

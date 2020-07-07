@@ -9,7 +9,7 @@ if(input_text[1]=="한식"){
     food_name = "초콜릿";
 
     // 인스타그램 기능 추가
-    document.getElementById('insta').src='//lightwidget.com/widgets/15dacccc63855f0c9a837cfa56cc1e05.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/fd6fc210edad5d65bde6dcd293e5c489.html';
 
 }else if(input_text[1]=="신맛"){
     document.getElementById('picture').src=logo_info()

@@ -76,19 +76,24 @@ app.get('/result', function(req, res) {
       setTimeout(function(){//놀랍게도, 비동기는 그냥 시간을 주는 걸로 처리해버렸습니다. 코드의 가독성도 살린 셈이죠..
         var sql = 'select foodname from tagmatch order by hit desc limit 1';
         db.query(sql,function(err,food){
+          var answer = new Array();
+          answer = ["곱창","닭발","파스타","떡볶이","초밥","마라탕","파전","전골","치킨","커리","브런치","라면","샐러드","도넛","쌀국수"];
           if(err) {
             throw err;
             //console.log('error:',err.message);
           }
             console.log(food[0]);
-          
-            if(food[0].foodname=="곱창"){
+           
+          for(var i=0;i<answer.length;i++){
+            if(food[0].foodname===answer[i]){
               var html = template.HTML(food[0].foodname); 
               res.send(html);//res 관련된거 미들웨어에 하나만 있어야함. 응답을 보냈는데 또 보내면 이상하잖아.. 라우터개념 이제야 이해했다..
             }
+          }
+          
           
   
-        img_name=food[0].foodname;
+        
       });
     },1000);
    
