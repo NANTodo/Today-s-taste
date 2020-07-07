@@ -1,26 +1,142 @@
-var food_name;
-if(input_text[1]=="한식"){
+
+if(search_food =="곱창"){
     document.getElementById('picture').src=logo_info()
         function logo_info() {
         var img_src;
-            img_src = './images/chocolate.jpg';
+            img_src = './images/gopchang.jpg';
         return img_src;
         }
-    food_name = "초콜릿";
+
 
     // 인스타그램 기능 추가
-    document.getElementById('insta').src='//lightwidget.com/widgets/fd6fc210edad5d65bde6dcd293e5c489.html';
+    document.getElementById('insta').src='//lightwidget.com/widgets/dac02c2510f151edbd35d9b8144872e9.html';
 
-}else if(input_text[1]=="신맛"){
+}else if(search_food=="닭발"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
     var img_src;
-        img_src = './images/orange.jpg';
+        img_src = './images/dakbal.jpg';
     return img_src;
     }
-    food_name = "오렌지";
-
-    document.getElementById('insta').src='//lightwidget.com/widgets/fc211152eb9450a49ddddbc1be37b435.html';
-}else{
-    food_name="세종대";
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="파스타"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/pasta.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="떡볶이"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/topokki.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}
+else if(search_food=="초밥"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/chobap.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="마라탕"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/maratang.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="파전"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/pajeon.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="전골"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/jeongol.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="치킨"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/chicken.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="커리"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/curry.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="브런치"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/brunch.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="라면"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/ramyeon.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="샐러드"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/salad.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}else if(search_food=="도넛"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/donuts.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
+}
+else if(search_food=="쌀국수"){
+    document.getElementById('picture').src=logo_info()
+    function logo_info() {
+    var img_src;
+        img_src = './images/ricenoodles.jpg';
+    return img_src;
+    }
+   
+    document.getElementById('insta').src='//lightwidget.com/widgets/bf7d2800ee77569288df00afc19e7d53.html';
 }
