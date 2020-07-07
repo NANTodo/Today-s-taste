@@ -6,8 +6,11 @@ var fs = require('fs');
 var mysql = require('mysql');
 var bodyParser = require('body-parser'); // body-parser를 bodyParser란 변수로 사용
 var template = require('./template.js');
+
+
 const { resolveSoa } = require('dns');
 const { Console } = require('console');
+
 var app = express();
 
 //db 연결
@@ -34,7 +37,7 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname+'/main.html'));
    
 });
-
+//form의 action 태그에서 result.html이 아닌 result로 했긴 때문에 라우터는 그냥 result로 해야함.
 app.get('/result', function(req, res) {
     console.log("두번째화면");
     res.sendFile(path.join(__dirname+'/result.html'));//이걸로 인해서 main2.html 불러옴. 물론 html form태그에서 action 경로를 해줘야 이동함.
@@ -47,6 +50,7 @@ app.get('/result', function(req, res) {
     //검색할 때 어떻게 sql에서 찾아서 사진을 보여줄건지. 순서 상관x 너무 어렵다..
     db.query('select * from tastetag;',function (err, rows, fields) {
         var wordAry = new Array();
+        
         var q=0;
         var p=0;
         var cnt=-1;
@@ -55,9 +59,9 @@ app.get('/result', function(req, res) {
             for(var j=0;j<search_text.length;j++){//검색 단어의 갯수
                 for(var i=0;i<rows.length;i++){//tastetag행의 갯수
                     if(search_text[j+1]==rows[i].tname){//검색 단어와 tastetag의 tname이 같으면 ex) 한식(search_text) == 한식(tname)
-                        console.log("tname : " + rows[i].tname + " tcode : " + rows[i].tcode);//tname에 해당하는 tcode를 구별할수 있게됨
+                        //console.log("tname : " + rows[i].tname + " tcode : " + rows[i].tcode);//tname에 해당하는 tcode를 구별할수 있게됨
                         wordAry[q]=rows[i].tcode;
-                        console.log("wordAry "+wordAry[q]);
+                        //console.log("wordAry "+wordAry[q]);
                         q++;
                     }
                 }
@@ -70,10 +74,13 @@ app.get('/result', function(req, res) {
                     db.query('select * from food where taste?=?',[ii,wordAry[p]],function (err, rows2, fields) {
                         for(var k=0;k<rows2.length;k++){//k for문
                         console.log("검색결과 :  " + rows2[k].foodname +" "+rows2[k].taste1);//곱
+                        answer = rows2[k].foodname;
                         }//k for문
-                    
+                        
                     });
+                   
                 }
+              
             }//단어 한개
             else if(cnt==2){//단어 한개
                 q=0;
@@ -176,20 +183,22 @@ app.get('/result', function(req, res) {
                         }
                     }
                 }
-
+              
                 
              }//단어 5개
 
-                
+            
           
-           
+             title ="안뇽";
         } else {
             console.log('query error : ' + err);
             res.send(err);
         }
     });
+ //검색기능 끝!!!!!!!!!!!!!!!
  
-   
+
+    
 
 });
 

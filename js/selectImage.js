@@ -8,6 +8,9 @@ if(input_text[1]=="한식"){
         }
     food_name = "초콜릿";
 
+    // 인스타그램 기능 추가
+    document.getElementById('insta').src='//lightwidget.com/widgets/15dacccc63855f0c9a837cfa56cc1e05.html';
+
 }else if(input_text[1]=="신맛"){
     document.getElementById('picture').src=logo_info()
     function logo_info() {
@@ -16,6 +19,8 @@ if(input_text[1]=="한식"){
     return img_src;
     }
     food_name = "오렌지";
+
+    document.getElementById('insta').src='//lightwidget.com/widgets/fc211152eb9450a49ddddbc1be37b435.html';
 }else{
     food_name="세종대";
 }
